@@ -52,6 +52,9 @@
 </div>
 
 <style>
+  :global(html, body) {
+    background: #fff;
+  }
   .overlay {
     height: 100%;
     width: 100%;
