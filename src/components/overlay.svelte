@@ -1,18 +1,18 @@
 <script>
-  import { visibility } from "../store";
+  import { overlayVisible } from "../store";
   var progress = 0;
+  /**
+   * @type {any}
+   */
+  let vis;
 
   /**
    * @type {string | number | NodeJS.Timeout | undefined}
    */
   let prog; //for setInterval
   const addColor = () => (progress += 1);
-  const randomTime = () => Math.floor(Math.random() * 50);
-  $: if (progress === 100) {
-    stopProgress();
-    setTimeout(resetBar, 2500);
-    $visibility = "hidden";
-  }
+  const randomTime = () => Math.floor(Math.random() * 60);
+
   const stopProgress = () => {
     clearInterval(prog);
   };
@@ -21,12 +21,23 @@
     progress = 0;
   };
   const makeProgress = () => {
-    prog = setInterval(addColor, randomTime());
+    setInterval(addColor, 100);
   };
   makeProgress();
+  $: if ($overlayVisible) {
+    vis = "visible";
+  } else {
+    vis = "hidden";
+  }
+
+  $: if (progress === 100) {
+    stopProgress();
+    setTimeout(resetBar, 2500);
+    $overlayVisible = false;
+  }
 </script>
 
-<div class="overlay" style="visibility: {$visibility};">
+<div class="overlay" style="--vis:{vis};">
   <div class="cont">
     <div class="img">
       <img src="calculator-shadow.png" alt="" />
@@ -59,6 +70,7 @@
     justify-content: center;
     z-index: 1;
     text-align: center !important;
+    visibility: var(--vis);
   }
   .cont {
     padding-top: 350px;

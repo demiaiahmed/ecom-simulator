@@ -1,7 +1,7 @@
 <script>
   // @ts-nocheck
   import Switch from "@smui/switch";
-  import { visibility } from "../store";
+  import { overlayVisible } from "../store";
   const currency = "$";
   let clicked = false;
   let ctragreed = false;
@@ -77,7 +77,7 @@
   };
   function calculate() {
     clicked = true;
-    $visibility = "visible";
+    $overlayVisible = true;
   }
 </script>
 
