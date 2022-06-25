@@ -20,6 +20,22 @@
     shippingdeliv,
     shippingcost;
 
+  $: if (clicked) {
+    cpc = cpc.replace(",", ".");
+    traffic = traffic.replace(",", ".");
+    cr = cr.replace(",", ".");
+    ctr = ctr.replace(",", ".");
+    price = price.replace(",", ".");
+    cost = cost.replace(",", ".");
+    uprice = uprice.replace(",", ".");
+    ucost = ucost.replace(",", ".");
+    ucr = ucr.replace(",", ".");
+    cconf = cconf.replace(",", ".");
+    cordconfcost = cordconfcost.replace(",", ".");
+    shippingdeliv = shippingdeliv.replace(",", ".");
+    shippingcost = shippingcost.replace(",", ".");
+  }
+
   const trafficCost = (traffic, cpc) => {
     return traffic * cpc;
   };

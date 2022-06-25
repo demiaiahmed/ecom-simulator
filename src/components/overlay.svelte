@@ -21,7 +21,7 @@
     progress = 0;
   };
   const makeProgress = () => {
-    setInterval(addColor, 100);
+    setInterval(addColor, 70);
   };
   makeProgress();
   $: if ($overlayVisible) {
@@ -52,8 +52,6 @@
 </div>
 
 <style>
-  * {
-  }
   .overlay {
     height: 100%;
     width: 100%;
