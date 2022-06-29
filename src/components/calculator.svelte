@@ -414,6 +414,10 @@
     background-color: #f7fdff;
     padding: 50px 0;
   }
+  .results h1 {
+    font-size: 41px;
+    margin-bottom: 42px;
+  }
   .answers {
     display: grid;
     grid-gap: 15px;
@@ -482,13 +486,27 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  @media (max-width: 650px) {
+    .answers {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
   @media (max-width: 500px) {
     ul {
       grid-template-columns: repeat(1, 1fr);
+      max-width: 100%;
     }
     .call-center {
       max-width: 100%;
       grid-template-columns: repeat(1, 1fr);
+    }
+    .answers {
+      max-width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .revs {
+      max-width: 100%;
+      grid-template-columns: (1, 1fr);
     }
   }
 </style>

@@ -16,4 +16,12 @@
       height: 120px;
     }
   }
+  @media (max-width: 500px) {
+    img {
+      object-fit: cover;
+      width: 80%;
+      height: 150px;
+      object-position: 50% 50%;
+    }
+  }
 </style>

@@ -32,7 +32,7 @@
 
   $: if (progress === 100) {
     stopProgress();
-    setTimeout(resetBar, 2500);
+    setTimeout(resetBar, 500);
     $overlayVisible = false;
   }
 </script>
