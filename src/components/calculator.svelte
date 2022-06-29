@@ -165,10 +165,10 @@
           bind:value={ucost}
           disabled={!upsellagreed}
         />
-        <p>Conversion rate</p>
+        <p>Conversion rate %</p>
         <input
           type="text"
-          placeholder="What's your CTR?"
+          placeholder="What's your CTR %?"
           bind:value={ucr}
           disabled={!upsellagreed}
         />
