@@ -135,10 +135,10 @@
         bind:value={cost}
         required
       />
-      <p>Conversion rate</p>
+      <p>Conversion rate %</p>
       <input
         type="text"
-        placeholder="What's your Conversion Rate?"
+        placeholder="What's your Conversion Rate %?"
         bind:value={cr}
         required
       />
