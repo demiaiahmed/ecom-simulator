@@ -154,21 +154,21 @@
         <p>Product price</p>
         <input
           type="text"
-          placeholder="What's your CTR?"
+          placeholder="What's your Product price?"
           bind:value={uprice}
           disabled={!upsellagreed}
         />
         <p>Product cost</p>
         <input
           type="text"
-          placeholder="What's your CTR?"
+          placeholder="What's your Product cost?"
           bind:value={ucost}
           disabled={!upsellagreed}
         />
         <p>Conversion rate %</p>
         <input
           type="text"
-          placeholder="What's your CTR %?"
+          placeholder="What's your Conversion rate %?"
           bind:value={ucr}
           disabled={!upsellagreed}
         />
